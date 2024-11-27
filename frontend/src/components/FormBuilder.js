@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import './FormBuilder.css'; // Import the CSS
+import './FormBuilder.css'; 
 
 const fieldTypes = [
     { type: 'text', label: 'Text' },
@@ -17,7 +17,7 @@ function FormBuilder() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [fields, setFields] = useState([]);
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();  
 
     const addField = (type) => {
         const newField = {
@@ -60,7 +60,7 @@ function FormBuilder() {
 
     return (
         <div className="form-builder-container">
-            <h2>Form Builder</h2>
+            <h2>Dynamic Form Builder</h2>
             <div>
                 <label>Title:</label>
                 <input 
